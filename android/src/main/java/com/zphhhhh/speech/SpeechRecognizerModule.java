@@ -58,7 +58,7 @@ public class SpeechRecognizerModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void init(String AppId) {
         if (mIat != null) {
-            return;
+          mIat = null;
         }
 
         SpeechUtility.createUtility(this.context, SpeechConstant.APPID + "=" + AppId);
